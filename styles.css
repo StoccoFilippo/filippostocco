@@ -1,0 +1,237 @@
+/* Base & typography */
+body {
+  margin: 0;
+  background: #111;
+  color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Layout Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+  height: 70vh;
+  margin: 20px 0;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg,
+      #1b0932 0%,
+      #4a2380 30%,
+      #5666ff 70%,
+      #4effd2 100%);
+
+
+  background-size: 150% 150%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-content {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.location {
+  text-align: right;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* Navigation */
+.nav {
+  position: sticky;
+  top: 20px;
+  margin-top: -5rem;
+  margin-bottom: 40px;
+  padding: 0 30px;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  /* Seamless override for nav */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.nav-links a {
+  margin-left: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* Glass Panel Utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  color: #eee;
+}
+
+/* Sections */
+section {
+  margin-bottom: 60px;
+  padding: 40px;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  /* Reduced from 2rem */
+  margin-bottom: 30px;
+  font-weight: 400;
+  opacity: 0.8;
+  letter-spacing: -0.02em;
+}
+
+/* Project List (And-Now style) */
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.3s ease, padding-left 0.3s ease;
+  cursor: pointer;
+}
+
+.project-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 8px;
+  border-bottom-color: transparent;
+}
+
+.project-name {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+/* Reduced from 1.8rem */
+
+.project-tags span {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-left: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Protein Showcase Grid */
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.showcase-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.showcase-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.showcase-item:hover img {
+  transform: scale(1.05);
+}
+
+.showcase-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  padding: 40px;
+  margin-bottom: 40px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
