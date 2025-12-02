@@ -143,6 +143,27 @@
 </head>
 
 <body>
+    <!-- Fixed Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle fixed-toggle" aria-label="Toggle Dark/Light Mode">
+        <!-- Sun Icon (for Dark Mode) -->
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon (for Light Mode) -->
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
 
     <div class="project-container">
         <!-- Left Sidebar -->
@@ -162,17 +183,49 @@
 
             <section id="introduction">
                 <h2>Introduction</h2>
-                <p>Content coming soon...</p>
+                <p>
+                    This project addresses the challenge of designing binders for the Nipah virus.
+                    More details about the competition can be found <a
+                        href="https://proteinbase.com/competitions/adaptyv-nipah-competition" target="_blank"
+                        style="color: #4effd2; text-decoration: none;">here</a>.
+                </p>
             </section>
 
             <section id="methods">
                 <h2>Methods</h2>
-                <p>Content coming soon...</p>
+                <p>
+                    <strong>ProtRL</strong> was applied to a fine-tuned protein language model (pLM) using
+                    <strong>epirin B</strong> as the starting point.
+                    The <strong>REINFORCE</strong> algorithm was utilized with a comprehensive reward function that
+                    included:
+                </p>
+                <ul>
+                    <li>Length</li>
+                    <li>PAE (Predicted Aligned Error)</li>
+                    <li>Shape Complementarity</li>
+                    <li>LIS (Local Interaction Score)</li>
+                    <li>IPTM_D0chn</li>
+                    <li>dRMSD</li>
+                    <li>IPSAE</li>
+                    <li>Number of clusters</li>
+                </ul>
+                <p>
+                    The first selection step was based on the implicit reward, followed by rigorous in-silico metrics to
+                    identify the most promising candidates.
+                </p>
             </section>
 
-            <section id="conclusions">
-                <h2>Conclusions</h2>
-                <p>Content coming soon...</p>
+            <section id="other-strategies">
+                <h2>Other Strategies</h2>
+                <p>
+                    In addition to the main approach, several other strategies were tested:
+                </p>
+                <ul>
+                    <li>Nanobody fine-tuning with the same aim, starting with nanobody <strong>n424</strong>.</li>
+                    <li>Using <strong>REINFORCE</strong> with different configurations.</li>
+                    <li>Using <strong>GRPO</strong> (Group Relative Policy Optimization).</li>
+                    <li>Testing <strong>CoT</strong> (Chain of Thought) - <em>soon to come</em>.</li>
+                </ul>
             </section>
         </main>
     </div>
@@ -215,6 +268,7 @@
             });
         });
     </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

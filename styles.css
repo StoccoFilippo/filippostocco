@@ -235,3 +235,148 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
 }
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: inherit;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hide/Show Icons based on mode */
+.icon-sun {
+  display: block;
+}
+
+.icon-moon {
+  display: none;
+}
+
+/* Light Mode */
+body.light-mode {
+  background: #f4f4f4;
+  color: #333;
+}
+
+body.light-mode .hero {
+  background: linear-gradient(135deg,
+      #6b46c1 0%,
+      #8b7fe6 30%,
+      #7dd3fc 70%,
+      #67e8f9 100%);
+}
+
+body.light-mode .nav.scrolled {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .glass-panel {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+}
+
+body.light-mode .project-item {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .project-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .footer-content {
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .theme-toggle {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+body.light-mode .theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .icon-sun {
+  display: none;
+}
+
+body.light-mode .icon-moon {
+  display: block;
+}
+
+/* Project Page Light Mode Overrides */
+body.light-mode .home-link {
+  color: #333;
+}
+
+body.light-mode .sidebar {
+  border-right-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .project-content h1,
+body.light-mode .content h1,
+body.light-mode .content h2 {
+  color: #333;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .project-content p,
+body.light-mode .content p,
+body.light-mode .content ul,
+body.light-mode .content li {
+  color: #555;
+}
+
+body.light-mode .toc-header {
+  color: #666;
+}
+
+body.light-mode .toc-nav a {
+  color: #888;
+}
+
+body.light-mode .toc-nav a:hover,
+body.light-mode .toc-nav a.active {
+  color: #6b46c1;
+}
+
+/* Fixed Theme Toggle for Project Pages */
+.fixed-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.2);
+  /* Slightly darker for visibility on light bg */
+  backdrop-filter: blur(5px);
+}
+
+body.light-mode .fixed-toggle {
+  background: rgba(255, 255, 255, 0.2);
+}
