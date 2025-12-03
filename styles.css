@@ -28,28 +28,19 @@ a {
   height: 70vh;
   margin: 20px 0;
   border-radius: 1.5rem;
-  background: linear-gradient(135deg,
-      #1b0932 0%,
-      #4a2380 30%,
-      #5666ff 70%,
-      #4effd2 100%);
-
-
-  background-size: 150% 150%;
-  animation: gradientMove 15s ease infinite;
+  background-image: url('textures/indieground-freebies-textures-gradients/Freebie-GradientTextures-02.jpg');
+  background-size: 120% 120%;
+  background-position: center;
+  animation: heroMove 20s ease-in-out infinite alternate;
 }
 
-@keyframes gradientMove {
+@keyframes heroMove {
   0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
+    background-position: 40% 50%;
   }
 
   100% {
-    background-position: 0% 50%;
+    background-position: 60% 50%;
   }
 }
 
@@ -280,11 +271,7 @@ body.light-mode {
 }
 
 body.light-mode .hero {
-  background: linear-gradient(135deg,
-      #6b46c1 0%,
-      #8b7fe6 30%,
-      #7dd3fc 70%,
-      #67e8f9 100%);
+  background-image: url('textures/indieground-freebies-textures-gradients/Freebie-GradientTextures-04.jpg');
 }
 
 body.light-mode .nav.scrolled {
