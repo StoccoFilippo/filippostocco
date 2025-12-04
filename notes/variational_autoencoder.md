@@ -44,6 +44,7 @@ where $p(z)$ is the prior distribution of latent variables, $p(x\mid z)$ is the 
 
 >[!NOTE]
 > This is simply Bayes rule. 
+
 >[!IMPORTANT]
 > This is intractable as the $p(x)=\int p(x \mid z)p(z)dz$ involves an integral over all possible latent variables $z$. In many cases, the latent space is very high-dimensional (e.g., millions of possible latent states), and the integral does not have a simple analytical solution. As a result, computing the exact likelihood requires solving this complex integral, which is often not feasible. The true posterior $p(z\mid x)$ is also intractable to compute as it involves both the likelihood $p(x\mid z)$ and the prior $p(z)$.
 
