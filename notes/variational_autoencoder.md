@@ -10,7 +10,11 @@ VAEs learn a probabilistic representation of data $x$ within a latent space usin
 
 ## Training Objective
 
-VAEs are trained by maximizing the Evidence Lower Bound (ELBO):$$\mathcal{L}(\theta) = \mathbb{E}_{q(z\mid x)}[\log p(x\mid z)] - \text{KL}(q(z\mid x) \mid \mid  p(z))$$ This objective has two components. The first term, $\mathbb{E}_{q(z\mid x)}[\log p(x\mid z)]$, is the reconstruction loss that measures how well the decoder reconstructs the original data. The second term is the KL divergence, which acts as a regularizer by pushing the learned posterior $q(z\mid x)$ towards the prior $p(z)$. When we maximize the ELBO, we're simultaneously encouraging the model to accurately reconstruct the data while keeping the learned posterior close to the prior distribution.
+VAEs are trained by maximizing the Evidence Lower Bound (ELBO):
+
+$$\mathcal{L}(\theta) = \mathbb{E}_{q(z\mid x)}[\log p(x\mid z)] - \text{KL}(q(z\mid x) \mid \mid  p(z))$$
+
+This objective has two components. The first term, $\mathbb{E}_{q(z\mid x)}[\log p(x\mid z)]$, is the reconstruction loss that measures how well the decoder reconstructs the original data. The second term is the KL divergence, which acts as a regularizer by pushing the learned posterior $q(z\mid x)$ towards the prior $p(z)$. When we maximize the ELBO, we're simultaneously encouraging the model to accurately reconstruct the data while keeping the learned posterior close to the prior distribution.
 
 >[!IMPORTANT]
 > In generative models we are interested in learning the distribution of the data $p(x)$ and then generating new samples from it. We might also be interested in calculating the likelihood of the observed data $p(x)$.
