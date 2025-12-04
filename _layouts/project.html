@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} - Filippo Stocco</title>
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
@@ -23,19 +23,23 @@
 <body>
 
     <div class="container">
-        <!-- Navigation (Simplified version of main nav) -->
+        <!-- Navigation -->
         <div class="nav" style="margin-top: 20px;">
             <span>
                 <h2><a href="../index.html" style="text-decoration: none; color: inherit;">Filippo Stocco</a> / <a
-                        href="../index.html#notes" style="text-decoration: none; color: inherit;">Notes</a> / {{
+                        href="../index.html#projects" style="text-decoration: none; color: inherit;">Projects</a> / {{
                     page.title }}</h2>
             </span>
-            <!-- Theme Toggle could be added here if needed, but keeping it simple for now -->
         </div>
 
         <main>
             <section class="glass-panel note-content">
                 <h1>{{ page.title }}</h1>
+                {% if page.subtitle %}
+                <div class="meta-info" style="margin-bottom: 2rem; opacity: 0.7; font-family: monospace;">{{
+                    page.subtitle }}</div>
+                {% endif %}
+
                 {{ content }}
             </section>
         </main>

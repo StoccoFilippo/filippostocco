@@ -329,56 +329,7 @@ body.light-mode .icon-moon {
   display: block;
 }
 
-/* Project Page Light Mode Overrides */
-body.light-mode .home-link {
-  color: #333;
-}
 
-body.light-mode .sidebar {
-  border-right-color: rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode .project-content h1,
-body.light-mode .content h1,
-body.light-mode .content h2 {
-  color: #333;
-  border-bottom-color: rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode .project-content p,
-body.light-mode .content p,
-body.light-mode .content ul,
-body.light-mode .content li {
-  color: #555;
-}
-
-body.light-mode .toc-header {
-  color: #666;
-}
-
-body.light-mode .toc-nav a {
-  color: #888;
-}
-
-body.light-mode .toc-nav a:hover,
-body.light-mode .toc-nav a.active {
-  color: #6b46c1;
-}
-
-/* Fixed Theme Toggle for Project Pages */
-.fixed-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.2);
-  /* Slightly darker for visibility on light bg */
-  backdrop-filter: blur(5px);
-}
-
-body.light-mode .fixed-toggle {
-  background: rgba(255, 255, 255, 0.2);
-}
 
 /* Markdown Note Styles */
 .note-content {

@@ -17,8 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Navbar Scroll Effect
     const nav = document.querySelector('.nav');
     if (nav) {
+        const hero = document.querySelector('.hero');
+        const threshold = hero ? 450 : 50;
+
+        // Initial check in case we load on a scrolled page (especially for non-home pages)
+        if (window.scrollY > threshold) {
+            nav.classList.add('scrolled');
+        }
+
         window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 450);
+            nav.classList.toggle('scrolled', window.scrollY > threshold);
         });
     }
     // 3. Theme Toggle
