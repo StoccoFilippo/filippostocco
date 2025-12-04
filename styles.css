@@ -372,30 +372,34 @@ body.light-mode blockquote.alert {
   background: rgba(0, 0, 0, 0.03);
 }
 
-.alert-note {
+blockquote.alert.alert-note {
   border-color: #2f81f7;
   background: rgba(47, 129, 247, 0.1);
 }
 
-.alert-important {
+blockquote.alert.alert-important {
   border-color: #a371f7;
   background: rgba(163, 113, 247, 0.1);
 }
 
-.alert-warning {
+blockquote.alert.alert-warning {
   border-color: #9a6700;
+  background: rgba(154, 103, 0, 0.1);
 }
 
-.alert-tip {
+blockquote.alert.alert-tip {
   border-color: #1a7f37;
+  background: rgba(26, 127, 55, 0.1);
 }
 
-.alert-attention {
+blockquote.alert.alert-attention {
   border-color: #cf222e;
+  background: rgba(207, 34, 46, 0.1);
 }
 
-.alert-example {
+blockquote.alert.alert-example {
   border-color: #218bff;
+  background: rgba(33, 139, 255, 0.1);
 }
 
 .alert strong {
