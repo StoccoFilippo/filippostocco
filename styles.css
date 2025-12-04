@@ -373,11 +373,13 @@ body.light-mode blockquote.alert {
 }
 
 .alert-note {
-  border-color: #0969da;
+  border-color: #2f81f7;
+  background: rgba(47, 129, 247, 0.1);
 }
 
 .alert-important {
-  border-color: #8250df;
+  border-color: #a371f7;
+  background: rgba(163, 113, 247, 0.1);
 }
 
 .alert-warning {
